@@ -10,7 +10,7 @@ RUN apt-get install -y libzip-dev zip && docker-php-ext-install zip
 
 RUN a2enmod rewrite headers
 RUN docker-php-ext-install mysqli bcmath intl gd
-RUN echo "date.timezone = \"\${PHP_TIMEZONE}\"" > /usr/local/etc/php/conf.d/timezone.ini
+RUN echo "date.timezone = \"\${PHP_TIMEZONE}\"" >  /usr/local/etc/php/conf.d/timezone.ini
 
 WORKDIR /app
 COPY . /app
